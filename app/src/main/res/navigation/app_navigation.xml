@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.navigation.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/go_to_page1"
+            app:destination="@id/page_12"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/go_to_page2"
+            app:destination="@id/page_22"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/page_12"
+        android:name="com.example.navigation.page_1"
+        android:label="fragment_page_1"
+        tools:layout="@layout/fragment_page_1" >
+        <action
+            android:id="@+id/page1_to_home"
+            app:destination="@id/home2"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/page_22"
+        android:name="com.example.navigation.Page_2"
+        android:label="fragment_page_2"
+        tools:layout="@layout/fragment_page_2" >
+        <action
+            android:id="@+id/page2_to_home"
+            app:destination="@id/home2"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.navigation.search"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/account"
+        android:name="com.example.navigation.account"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+</navigation>
